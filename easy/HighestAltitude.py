@@ -3,8 +3,9 @@ class Solution:
         altitude = 0
         highest = 0
 
-        for g in gain: d
+        for g in gain:
             altitude += g
+            highest = max(highest, altitude)
             highest = max(highest, altitude)
 
         return highest
