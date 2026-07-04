@@ -1,26 +1,30 @@
 from collections import defaultdict
+from typing import List
 
-class Solution:
-    def minScore(self, n: int, roads: List[List[int]]) -> int:
-        graph = defaultdict(list)
+s = 4
+roads = [[1,2,9],[2,3,6],[2,4,5],[1,4,7]]
+graph = defaultdict(list)
+def minScore(n: int, roads: List[List[int]]) -> int:
 
-        for u, v, w in roads:
-            graph[u].append((v, w))
-            graph[v].append((u, w))
 
-        ans = float("inf")
-        visited = set()
+       for l,r,w in roads:
+           graph[l].append((r,w))
+           graph[r].append((l,w))
+       print(graph)
+       visited = set()
 
-        def dfs(node):
-            nonlocal ans
-            visited.add(node)
+       ans = float("inf")
 
-            for nei, w in graph[node]:
-                ans = min(ans, w)
+       def dfs(node):
+           nonlocal ans
+           visited.add(node)
 
-                if nei not in visited:
-                    dfs(nei)
+           for nei, w in graph[node]:
+               ans = min(ans, w)
+               if nei not in visited:
+                   dfs(nei)
+       dfs(1)
+       return ans
 
-        dfs(1)
 
-        return ans
+print(minScore(s, roads))
