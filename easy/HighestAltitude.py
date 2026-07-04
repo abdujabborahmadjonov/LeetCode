@@ -5,6 +5,6 @@ class Solution:
 
         for g in gain:
             altitude += g
-            highest = max(highest, altitude)  ddkkkkkkkkkk
+            highest = max(highest, altitude)  ddkkkkkkkkkkk
 
         return highest
