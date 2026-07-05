@@ -7,4 +7,4 @@ class Solution:
             altitude += g
             highest = max(highest, altitude)
 
-        return highest
+        return highest k
