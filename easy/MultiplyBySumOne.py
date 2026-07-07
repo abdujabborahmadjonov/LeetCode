@@ -9,7 +9,7 @@ def sumAndMultiply( n: int) -> int:
         if e != '0':
             b+=e
             c+=int(e)
-    return int(b)*c sdkkkllllllllllllllllllllllllllllllllllllllllllllllllll
+    return int(b)*c sdkkklllllllllllllllllllllllllllllllllllllllllllllllllllll
 
 
 
