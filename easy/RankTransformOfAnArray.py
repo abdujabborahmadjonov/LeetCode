@@ -14,4 +14,4 @@ def arrayRankTransform(arr: List[int]) -> List[int]:
 
 
 arr = [40, 10, 20, 30]
-print(arrayRankTransform(arr))
+print(arrayRankTransform(arr))dd
